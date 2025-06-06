@@ -34,4 +34,5 @@ Auto-detected Project Settings (Next.js):
     * `VERCEL_PROJECT_ID`: .vercel/project.json 内にある `projectId`
 * [GitHub ActionのWorkflowファイル](.github/workflows)を作成し、pushします。([これ](https://vercel.com/guides/how-can-i-use-github-actions-with-vercel)のコピペですが)
 * main以外のブランチに変更がpushされるとpreviewとしてデプロイされ、mainに変更がpushされるとproductionとしてデプロイされます
-    * ただし、デプロイされたpreviewは、vercelアカウントを持っている1人以外アクセスできないか、あるいはprotectionを切って誰でもアクセスできるようにするかの2択しかなさそうなのであんまり意味ないかも?
+    * ただし、デプロイされたpreviewは、vercelアカウントを持っている1人以外アクセスできないか、あるいはprotectionを切って誰でもアクセスできるようにするかの2択しかなさそう
+    * organization外の他のユーザーがforkから作成したプルリクエストでは、Actionの実行時にsecretにアクセスできないためデプロイできません。
